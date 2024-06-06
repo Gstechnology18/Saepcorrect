@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #333;
+    text-align: center;
+    background-image: url(/img/Designer\ \(1\).jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.titulo {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: aliceblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.login {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: left;
+}
+
+.transparente {
+    background-color: rgba(211, 197, 197, 0.248);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.login h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.login input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centraliza o botão horizontalmente */
+}
+
+.login button {
+    padding: 10px;
+    margin: 10px 0 0; /* Removeu as margens laterais para melhor centralização */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    background-color: #973c00;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    min-width: 50%; /* Adicionado para garantir que o botão tenha um tamanho razoável */
+    max-width: 100%; /* Garante que o botão não ultrapasse o contêiner */
+    text-align: center; /* Centraliza o texto do botão */
+}
+
+.login button:hover {
+    background-color: #bbd000;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .login {
+        padding: 20px;
+    }
+
+    .login input {
+        width: calc(100% - 20px);
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .login button {
+        width: calc(100% - 20px);
+        margin: 10px 0 0;
+    }
+}

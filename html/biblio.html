@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/biblio.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Bibliotecária - Gerenciamento de Empréstimos</title>
+</head>
+<body>
+    <h1 class="titulo">Gerenciamento de Empréstimos</h1>
+    
+    <div class="container">
+        <!-- Registro de Empréstimos -->
+        <div class="registro">
+            <h2>Registrar Empréstimo</h2>
+            <form id="registro-emprestimo-form">
+                <label for="codigo-emprestimo">Código do Empréstimo</label>
+                <input id="codigo-emprestimo" type="text" placeholder="Código do Empréstimo" required>
+                
+                <label for="nome-livro">Nome do Livro</label>
+                <input id="nome-livro" type="text" placeholder="Nome do Livro" required>
+                
+                <label for="matricula-estudante">Matrícula do Estudante</label>
+                <input id="matricula-estudante" type="text" placeholder="Matrícula do Estudante" required>
+                
+                <label for="data-retirada">Data de Retirada</label>
+                <input id="data-retirada" type="date" required>
+                
+                <label for="data-prevista-entrega">Data Prevista de Entrega</label>
+                <input id="data-prevista-entrega" type="date" required><br>
+                
+                <button class="botao" type="submit">Registrar Empréstimo</button>
+            </form>
+        </div>
+        
+        <!-- Consulta de Empréstimos -->
+        <div class="consulta">
+            <h2>Consultar Empréstimos</h2>
+            <input id="consulta-emprestimo" type="text" placeholder="Digite a matrícula do estudante para consultar">
+            <button class="botao" type="button" onclick="consultarEmprestimos()">Consultar</button>
+            <div id="resultado-consulta"></div>
+        </div>
+        
+        <!-- Edição e Exclusão de Empréstimos -->
+        <div class="edicao-exclusao">
+            <h2>Editar/Excluir Empréstimo</h2>
+            <form id="edicao-emprestimo-form">
+                <label for="edicao-codigo-emprestimo">Código do Empréstimo</label>
+                <input id="edicao-codigo-emprestimo" type="text" placeholder="Código do Empréstimo" required>
+                
+                <label for="edicao-nome-livro">Nome do Livro</label>
+                <input id="edicao-nome-livro" type="text" placeholder="Nome do Livro">
+                
+                <label for="edicao-matricula-estudante">Matrícula do Estudante</label>
+                <input id="edicao-matricula-estudante" type="text" placeholder="Matrícula do Estudante">
+                
+                <label for="edicao-data-retirada">Data de Retirada</label>
+                <input id="edicao-data-retirada" type="date">
+                
+                <label for="edicao-data-prevista-entrega">Data Prevista de Entrega</label>
+                <input id="edicao-data-prevista-entrega" type="date"><br>
+                
+                <button class="botao" type="submit">Editar Empréstimo</button>
+                <button class="botao" type="button" onclick="excluirEmprestimo()">Excluir Empréstimo</button>
+                <button class="botao" type="button" onclick="voltar1()">Voltar</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="/Javascript/emprestimos.js"></script>
+</body>
+</html>
